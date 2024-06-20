@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header bg-danger text-white">
+                <h1 class="text-center mb-0">CRUD Application</h1>
+            </div>
+            <div class="card-body bg-light">
+                <form id="taskForm" class="mb-4">
+                    <input type="hidden" id="taskId" value="">
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input type="text" class="form-control" id="title" placeholder="Enter title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <input type="text" class="form-control" id="description" placeholder="Enter description" required>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-danger mr-2">Submit</button>
+                        <button type="button" id="resetButton" class="btn btn-secondary">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="card mt-4">
+            <div class="card-header bg-secondary text-white">
+                <h2 class="text-center mb-0">Display tasks</h2>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <input type="text" id="searchBar" class="form-control" placeholder="Search by title...">
+                </div>
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Index</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tasksList">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
